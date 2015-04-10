@@ -1,3 +1,7 @@
+module TastyBreadcrumbs
+end
+
+
 require "tasty_breadcrumbs/item"
 require "tasty_breadcrumbs/template"
 require "tasty_breadcrumbs/printer"
