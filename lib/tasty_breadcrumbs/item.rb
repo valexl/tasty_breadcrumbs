@@ -1,7 +1,7 @@
 class TastyBreadcrumbs::Item
   attr_reader :title
   def initialize(title, url_or_route_helper_method)
-    @title = title
+    @title = title.to_s
     @url_or_route_helper_method  = url_or_route_helper_method
   end
 
