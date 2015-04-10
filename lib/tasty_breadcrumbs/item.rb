@@ -1,6 +1,4 @@
 class TastyBreadcrumbs::Item
-  include ::Rails.application.routes.url_helpers
-
   attr_reader :title
   def initialize(title, url_or_route_helper_method)
     @title = title
@@ -9,7 +7,7 @@ class TastyBreadcrumbs::Item
 
   def url
     return @url_or_route_helper_method if @url_or_route_helper_method.instance_of?(String)
-    send(@url_or_route_helper_method)
+    Rails.application.routes.url_helpers.send(@url_or_route_helper_method)
   end
   
 end

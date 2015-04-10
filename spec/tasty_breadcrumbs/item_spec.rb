@@ -2,7 +2,6 @@ require 'spec_helper'
 
 RSpec.describe TastyBreadcrumbs::Item do
   before(:each) do
-    allow(TastyBreadcrumbs::Item).to receive(:admin_root_path).and_return('/admin')
     @title = 'Title of page'
     @url_or_route_helper_method = :admin_root_path
     @item = TastyBreadcrumbs::Item.new @title, @url_or_route_helper_method

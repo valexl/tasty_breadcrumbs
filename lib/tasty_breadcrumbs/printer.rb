@@ -1,6 +1,8 @@
+require 'action_view'
+
 class TastyBreadcrumbs::Printer
-  include ActionView::Helpers::TagHelper
-  include ActionView::Context
+  include ::ActionView::Helpers::TagHelper
+  include ::ActionView::Context
   
   DEFAULT_CONTAINER_TEMPLATE   = 'ol.breadcrumb'
   DEFAULT_SIMPLE_ITEM_TEMPLATE = 'li a'
