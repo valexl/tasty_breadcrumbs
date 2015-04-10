@@ -4,10 +4,6 @@ class TastyBreadcrumbs::Printer
   include ::ActionView::Helpers::TagHelper
   include ::ActionView::Context
   
-  DEFAULT_CONTAINER_TEMPLATE   = 'ol.breadcrumb'
-  DEFAULT_SIMPLE_ITEM_TEMPLATE = 'li a'
-  DEFAULT_LAST_ITEM_TEMPLATE   = 'li'
-
   attr_reader :container_template, :simple_item_template, :last_item_template
   def initialize(container_template, simple_item_template, last_item_template)
     @container_template   = container_template

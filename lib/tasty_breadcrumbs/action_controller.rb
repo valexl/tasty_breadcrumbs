@@ -8,21 +8,21 @@ module TastyBreadcrumbs::ActionController
 
 
   class_methods do
-    def add_breadcrumb(item, path)
+    def add_tasty_breadcrumb(item, path)
       before_filter do |controller|
-        controller.send(:add_breadcrumb, item, path)
+        controller.send(:add_tasty_breadcrumb, item, path)
       end
     end
   end
 
   def setup_tasty_breadcrumbs
     @tasty_breadcrumbs = TastyBreadcrumbs::Main.new
-    @tasty_breadcrumbs_template = TastyBreadcrumbs::Template.new  TastyBreadcrumbs::Printer::DEFAULT_CONTAINER_TEMPLATE,
-                                                                  TastyBreadcrumbs::Printer::DEFAULT_SIMPLE_ITEM_TEMPLATE,
-                                                                  TastyBreadcrumbs::Printer::DEFAULT_LAST_ITEM_TEMPLATE 
+    @tasty_breadcrumbs_template = TastyBreadcrumbs::Template.new  TastyBreadcrumbs::Template::DEFAULT_CONTAINER_TEMPLATE,
+                                                                  TastyBreadcrumbs::Template::DEFAULT_SIMPLE_ITEM_TEMPLATE,
+                                                                  TastyBreadcrumbs::Template::DEFAULT_LAST_ITEM_TEMPLATE 
   end
   
-  def add_breadcrumb(item, path)
+  def add_tasty_breadcrumb(item, path)
     @tasty_breadcrumbs.add_item(item, path)
   end
 

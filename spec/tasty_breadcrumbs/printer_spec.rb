@@ -2,9 +2,9 @@ require 'spec_helper'
 
 RSpec.describe TastyBreadcrumbs::Printer do
   before(:each) do
-    @printer = TastyBreadcrumbs::Printer.new TastyBreadcrumbs::Printer::DEFAULT_CONTAINER_TEMPLATE, 
-                                                                    TastyBreadcrumbs::Printer::DEFAULT_SIMPLE_ITEM_TEMPLATE, 
-                                                                    TastyBreadcrumbs::Printer::DEFAULT_LAST_ITEM_TEMPLATE
+    @printer = TastyBreadcrumbs::Printer.new TastyBreadcrumbs::Template::DEFAULT_CONTAINER_TEMPLATE, 
+                                             TastyBreadcrumbs::Template::DEFAULT_SIMPLE_ITEM_TEMPLATE, 
+                                             TastyBreadcrumbs::Template::DEFAULT_LAST_ITEM_TEMPLATE
     @first_item = TastyBreadcrumbs::Item.new 'Main', :root_path
     @last_item  = TastyBreadcrumbs::Item.new 'Another page', :some_another_path
     @items      = [@first_item, @last_item]

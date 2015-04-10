@@ -22,9 +22,9 @@ RSpec.describe TastyBreadcrumbs::Main do
     end
   
     it 'render by breadcrumb template which return html_safe string' do
-      template = TastyBreadcrumbs::Template.new TastyBreadcrumbs::Printer::DEFAULT_CONTAINER_TEMPLATE,
-                                                                      TastyBreadcrumbs::Printer::DEFAULT_SIMPLE_ITEM_TEMPLATE,
-                                                                      TastyBreadcrumbs::Printer::DEFAULT_LAST_ITEM_TEMPLATE
+      template = TastyBreadcrumbs::Template.new TastyBreadcrumbs::Template::DEFAULT_CONTAINER_TEMPLATE,
+                                                TastyBreadcrumbs::Template::DEFAULT_SIMPLE_ITEM_TEMPLATE,
+                                                TastyBreadcrumbs::Template::DEFAULT_LAST_ITEM_TEMPLATE
 
       @breadcrumbs.add_item('Main', :root_path)
       @breadcrumbs.add_item('Another page', :some_another_path)

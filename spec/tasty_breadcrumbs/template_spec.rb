@@ -3,9 +3,9 @@ require 'spec_helper'
 
 RSpec.describe TastyBreadcrumbs::Template do
   before(:each) do
-    @template = TastyBreadcrumbs::Template.new TastyBreadcrumbs::Printer::DEFAULT_CONTAINER_TEMPLATE,
-                                                                     TastyBreadcrumbs::Printer::DEFAULT_SIMPLE_ITEM_TEMPLATE,
-                                                                     TastyBreadcrumbs::Printer::DEFAULT_LAST_ITEM_TEMPLATE
+    @template = TastyBreadcrumbs::Template.new TastyBreadcrumbs::Template::DEFAULT_CONTAINER_TEMPLATE,
+                                               TastyBreadcrumbs::Template::DEFAULT_SIMPLE_ITEM_TEMPLATE,
+                                               TastyBreadcrumbs::Template::DEFAULT_LAST_ITEM_TEMPLATE
   end
   describe 'has method' do
     it 'container and container=' do
