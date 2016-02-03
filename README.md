@@ -36,7 +36,7 @@ class BooksController < ApplicationController
   ...
 end
 ```
-By default tasty_breadcrumbs uses bootstrap styles. As result, previous example for index page will be displayed as:
+By default, tasty_breadcrumbs uses bootstrap styles. As result, previous example for index page will be displayed as:
 ```html
 <ol class="breadcrumb">
   <li>
@@ -48,7 +48,7 @@ By default tasty_breadcrumbs uses bootstrap styles. As result, previous example 
   <li>Current book title</li>
 </ol>
 ```
-Of course you can add customize styles for thumbnail. Add follow lines into `application_controller.rb`:
+Of course, you can add customize styles for thumbnail. Add follow lines into `application_controller.rb`:
 ```ruby
 class BooksController < ApplicationController
   before_action do
